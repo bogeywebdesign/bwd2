@@ -1,0 +1,1 @@
+	<p class="date"><span class="month"><?php the_time('M'); ?></span> <span class="day"><?php the_time('j'); ?></span></p>

@@ -1,0 +1,605 @@
+/*  
+Theme Name:Bwd 2
+Theme URI:http://www.bogeywebdesign.com/my-portfolio/wordpress-themes/bwd-2/
+Description:A clean, compliant two column design that uses distinctive graphics and has a large branding area at the top which uses the options page to display and/or edit. Multiple sidebars to allow for different setups on pages, posts, and your 404 page. Widget-ready, right sidebar, and search engine optimized.
+Author:Bogey Web Design
+Author URI:http://www.bogeywebdesign.com/
+Tags:blue, black, two-columns, fixed-width, right-sidebar
+Version:1.11
+*/
+
+body{
+  color:#666;
+	font:62.5%/1.2em Verdana, Helvetica, Arial, sans-serif;
+}
+
+*{
+	margin:0;
+	padding:0;
+}
+
+a{
+	text-decoration:none;
+	color:#09f;
+}
+
+a:hover{
+	border-bottom:1px solid #6cf;
+	color:#6cf;
+}
+
+a img{
+	border:0;
+}
+
+p, dt, dd, address, th, td{
+	font:1.4em/1.4em Verdana, Helvetica, Arial, sans-serif;
+	text-indent:1.5em;
+	margin:0 0 1em;
+}
+
+table{
+  margin:0 0 1em;
+}
+
+  th, td{
+    margin:0;
+    padding:.25em;
+  }
+
+address{
+  font-style:italic;
+}
+
+pre{
+	font:1.4em/2em courier, monospace;
+	margin:0 0 1em;
+}
+
+ul, ol{
+  margin:1em 0;
+}
+
+  li{
+    list-style-position:inside;
+    margin:0 0 1em 1em;
+  }
+
+    li li{
+      margin:0 0 1em 2em;
+    }
+  
+  ul li{
+    list-style-type:disc;
+  }
+  
+    ul li li{
+      list-style-type:circle;
+    }
+    
+      ul li li li{
+        list-style-type:square;
+      }
+  
+  ol li{
+    list-style-type:decimal;
+  }
+  
+    ol li li{
+      list-style-type:lower-alpha;
+    }
+    
+      ol li li li{
+        list-style-type:lower-roman;
+      }
+
+blockquote{
+	font:italic 1.4em/2em Verdana, Helvetica, Arial, sans-serif;
+  margin:2em;
+}
+
+  blockquote blockquote{
+    font-size:1em;
+  }
+
+  blockquote p{
+    font-size:1em;
+  }
+
+fieldset{
+	border:0;
+}
+
+	fieldset input, fieldset textarea{
+		border:1px solid #ccc;
+		margin:0 0 1em;
+	}
+
+	fieldset input.submit{
+		background:#eee;
+		padding:.5em;
+		text-align:center;
+	}
+
+	fieldset input.submit:hover{
+		background:#ccc;
+	}
+	
+	fieldset legend{
+		font-size:1.2em;
+		padding: 0 0 1em;
+		font-weight:bold;
+	}
+
+label{
+	font-weight:bold;
+	margin:0 0 .5em;
+}
+
+.clear{
+	clear:both;
+}
+
+img.centered,.aligncenter,div.aligncenter{
+  display:block;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+img.alignright,img.alignleft{
+  display:inline;
+}
+
+.alignright{
+  float:right;
+}
+
+.alignleft{
+  float:left;
+}
+
+#content{
+	float:left;
+	width:74%;
+}
+
+  #content .post{
+    position:relative;
+    clear:both;
+    overflow:auto;
+  }
+
+  #content .post .left{
+    position:absolute;
+    top:0;
+    left:0;
+  }
+  
+    #content .left .date .month, #content .left .date .day{
+      display:block;
+      width:3.6em;
+      background:url(images/month.gif) top left no-repeat;
+      font-weight:bold;
+      font-size:1.4em;
+      line-height:1.6em;
+      color:#fff;
+      text-align:center;
+      margin-bottom:.25em;
+    }
+    
+    #content .left .date .day{
+      background:url(images/day.gif) top left no-repeat;
+    }
+    
+    #content .left p{
+      text-indent:0;
+      font-size:1.1em;
+      line-height:2em;
+      margin:0 0 .5em;
+      padding-left:2.2em;
+    }
+    
+    #content .left p.date{
+      padding:0;
+    }
+    
+    #content .left p.author{
+      background:url(images/author.gif) left center no-repeat;
+    }
+    
+    #content .left p.comments{
+      background:url(images/comments.gif) left center no-repeat;
+    }
+  
+  #content .right{
+    float:left;
+    margin-left:14em;
+  }
+
+	#content h1, #content h2, #content h3, #content h4, #content h5, #content h6{
+		color:#555;
+		font-size:2em;
+		padding-bottom:1em;
+		clear:both;
+	}
+	
+	#content h2{
+	  font-size:1.5em;
+	}
+	
+	#content h3{
+	  font-size:1.25em;
+	}
+	
+	#content h4, #content h5, #content h6{
+	  font-size:1em;
+	}
+
+	#content h2.postTitle{
+	  color:#663;
+		padding-bottom:0;
+		font:normal 3.5em/1em Times, Times New Roman, Georgia, serif;
+	}
+	
+	#content h2.archive{
+		font-size:1.75em;
+	}
+	
+	#content h2 a{
+		color:#663;
+	}
+	
+	#content hr{
+		clear:left;
+		margin:1em 2em;
+	}
+	
+	#content .post{
+		margin-bottom:2.5em;
+		padding-right:2em;
+	}
+	
+	  #content .post .title {
+	    overflow: auto;
+	  }
+	
+	#content p{
+		clear:left;
+		line-height:2em;
+		overflow:auto;
+	}
+	
+		#content p.date{
+			text-indent:0;
+			font-weight:bold;
+			font-size:1em;
+		}
+	
+		#content p a:visited{
+			color:#39c;
+		}
+		
+		#content p.meta{
+			margin:1em 0 -1em;
+		}
+		
+		#content p.feedback{
+			padding-bottom:1em;
+		}
+		
+		#content li p, #content li blockquote{
+			float:none;
+			font:1.1em/1.3em Verdana, Helvetica, Arial, sans-serif;
+		}
+		
+		  #content li blockquote p{
+		    font-size:1em;
+		  }
+		
+	#content ul, #content ol, #content dl{
+		clear:left;
+		margin:0 3em 1em;
+	}
+	
+		#content ul li, #content ol li, #content dd, #content dt{
+			color:#666;
+			font:1.3em/2em Verdana, Helvetica, Arial, sans-serif;
+			margin:0 0 1em;
+		}
+		
+		  #content ul ul, #content ul ol, #content ol ol, #content ol ul {
+		    margin: 0 2em;
+		  }
+		
+  		  #content ul li li, #content ol li li {
+  		    font-size: 1em;
+  		  }
+		
+	#content #tagDescription, #content #categoryDescription {
+	  padding-bottom: 2em;
+	}
+		
+	#content ul.postInfo{
+		margin:1em 0 1em .5em;
+	}
+	
+		#content ul.postInfo li{
+		  list-style-type:none;
+			margin-bottom:0;
+			font-size:1.2em;
+		}
+	
+			#content ul.postInfo li span{
+				font-weight:bold;
+			}
+		
+	#content textarea{
+		width:50em;
+		height:10em;
+	}
+	
+	#content #page404 ul li{
+		float:left;
+		list-style-type:none;
+		margin:0 1em 1em 0;
+	}
+	
+	#content #comments, #content #trackBacks{
+		clear:both;
+	}
+	
+		#content #comments h4, #content #trackBacks h4{
+			font-size:1.2em;
+			margin:0 3em 1em 0;
+			padding-bottom:.5em;
+			border-bottom:0.1em solid #663;
+			color:#663;
+		}
+	
+		#content #comments p, #content #trackBacks p, #content fieldset p, #content p.categoryPagination{
+			text-indent:0;
+		}
+		
+		#content #comments p.commentAuthor{
+			font-size:1em;
+			margin-bottom:0;
+			overflow:hidden;
+		}
+		
+		#content #comments p.messageTime, #content #trackBacks p.commentAuthor{
+			font-size:1em;
+		}
+	
+		#content #comments li, #content #trackBacks li{
+		  list-style-position:outside;
+			margin-bottom:0;
+			padding:1em;
+		}
+	
+		#content #comments .avatar{
+			float:right;
+			padding:.5em;
+			margin-left:1em;
+			border:1px solid #ccc;
+		}
+		
+		#content #comments p.closedComments{
+		  text-indent:1.5em;
+		}
+		
+	#content p.categoryPagination{
+	  padding-right:1px;
+	}
+	
+	  #content p.categoryPagination span{
+	    width:45%;
+  	  float:right;
+  	  text-align:right;
+  	}
+		
+  	#content p.categoryPagination span:first-child{
+  	  float:left;
+  	  text-align:left;
+  	}
+		
+	#content label, #content textarea{
+		display:block;
+	}
+	
+	#content p.backToTop{
+		font-size:1.2em;
+		text-indent:0;
+	}
+
+#right{
+	float:right;
+	width:25%;
+	background:#e8e8e8;
+	margin-bottom:2em;
+}
+
+  #right .inner{
+    padding:1em;
+  }
+
+	#right h3{
+	  color:#333;
+	  border-top:.1em solid #ccc;
+		font-size:1.5em;
+		padding:1em 0;
+		margin:.2em 0;
+	}
+	
+	#right h3:first-child{
+	  border:0;
+	  padding-top:0;
+	}
+	
+		#right h3 a{
+			color:#69c;
+			margin-right:1em;
+		}
+
+	#right h4{
+		color:#69c;
+		font-size:1.25em;
+		padding:0 0 .5em 1em;
+		margin:.2em 0;
+	}
+		
+	#right #search{
+		margin-bottom:2em;
+	}
+	
+		#right #search div{
+			margin-top:.5em;
+		}
+		
+			#right #search input, #header #search input{
+				padding:.2em 0;
+			}
+			
+			#right #search input.submit, #header #search input.submit{
+				padding:.1em .5em;
+			}
+			
+	#right p#tagCloud{
+		text-indent:0;
+	}
+	
+		#right p#tagCloud a{
+			line-height:1.1em;
+		}
+	
+	#right ul{
+		margin-bottom:2em;
+	}
+	
+			#right ul li a{
+				font-size:1.4em;
+			}
+
+#wrapper{
+	width:100em;
+	margin: 0 auto;
+}
+
+#header{
+  background:#666 url(images/headline.gif) top left repeat-x;
+  margin:0 0 2em;
+}
+
+	#header #blogTitle{
+    padding:2em 0 0;
+    min-height:50px;
+	  width:100em;
+	  margin:0 auto;
+	}
+	
+	  #header #blogTitle fieldset {
+	    float:right;
+	    line-height:3em;
+	  }
+
+  	#header #blogTitle h1{
+  	  font-size:3em;
+  	  line-height:1em;
+  	  padding:0 7em .4em 0;
+  	  font-weight:normal;
+  		color:#fff;
+  		font-variant:small-caps;
+  	}
+  	
+  #header #blogInfo{
+    padding:0 0 2em;
+    border-top:1px solid #ccc;
+    background:#333 url(images/header.gif) bottom left repeat-x;
+  }
+	
+  	#header ul{
+  	  width:80em;
+  	  padding-left:20em;
+  	  margin:1em auto 3em;
+  	  text-align: right;
+  		list-style-type:none;
+  	}
+	
+  		#header li, #footer li{
+  			display:inline;
+  		}
+	
+  		#header ul li a, #footer ul li a, #footer p a{
+  			text-decoration:none;
+  			margin:0 .5em;
+  			font-variant:small-caps;
+  			font-size:1.5em;
+  			line-height:1.5em;
+  			color:#fff;
+  		}
+		
+  		#header ul li a:hover, #header ul li.current_page_item a,
+  		#footer ul li a:hover, #footer ul li.current_page_item a,
+  		#footer p a:hover{
+  			color:#a7d48c;
+  			border:0;
+  		}
+  		
+  		#header ul li.current_page_item a,
+  		#footer ul li.current_page_item a{
+  		  font-weight:bold;
+  		}
+  		
+  	#header #blogDescription{
+  	  margin:0 auto;
+  	  width:80em;
+    	clear:both;
+  	  background:url(images/bullseye.gif) top left no-repeat;
+  	  min-height:15em;
+  	  padding-left:20em;
+  	}
+  		
+    	#header h2{
+    	  font-weight:normal;
+    	  color:#9c9;
+    	  font-size:3em;
+    	  line-height:1em;
+    	  margin:0 0 .5em;
+    	}
+		
+    	#header p{
+    	  color:#fff;
+    	  text-indent:0;
+    	}
+		
+#footer{
+	clear:both;
+	text-align:center;
+	background:#666 url(images/footer.gif) bottom left repeat-x;
+	padding:.5em 0 1em;
+	color:#fff;
+}
+
+  #footer div{
+    margin:0 auto;
+    width:100em;
+  }
+
+  #footer ul{
+    text-align:left;
+  }
+
+	#footer p#designedBy{
+	  float: right;
+		margin:0 0 0 4em;
+	}
+	
+	  #footer p a{
+	    font-size:1em;
+	    margin:0;
+	    color:#a7d48c;
+	  }
+	  
+	#footer p#copyright{
+	  margin:.5em;
+	  color:#a7d48c;
+	}
